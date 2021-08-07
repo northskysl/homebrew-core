@@ -25,6 +25,11 @@ class OpenOcd < Formula
     depends_on "automake" => :build
     depends_on "libtool" => :build
     depends_on "texinfo" => :build
+
+    patch do
+      url "https://raw.githubusercontent.com/kbeckmann/ubuntu-openocd-git-builder/5d9c5680080582a5841ebc1491532ff22af19a04/0001-Extend-bank1-and-enable-bank2-of-STM32H7B0VBTx.patch"
+      sha256 "9283dc6a9d1e015bc2c46c04ec9016d9152a686654278775df534dfb0547888e"
+    end
   end
 
   depends_on "pkg-config" => :build
